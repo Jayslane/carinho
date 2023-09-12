@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+        <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="./assets/logo.png" alt="Logo" />
+            </a>
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#inicio">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cursos">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login">Login</a>
+            <a href="#registar" class="botao destaque">Registrar</a>
+            
+            <div id="switch" onclick="toggleMode()">
+              <button id="bnt" type="button"></button>
+              <span></span>
+            
+        </aside>
+    </header>
+    
+      <main class="conteudo">
+        
+      <div id="container"></div>
+        <div class="carrinho">
+          <div class="carrinho_itens"></div>
+          <div class="carrinho_total">
+            <h3><ion-icon name="cart-outline"></ion-icon><strong> Carrinho Vazio</strong></h3>
+          </div>
+      </div>
+      
+    </main>
+      <div id="social-links">
+        <a href="#" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="#" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="#" target="_blank">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a href="#" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+
+
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+  <footer>
+        Este projeto foi desenvolvido por
+        <a href="#" target="_blank">Nome_aluno</a>
+  </footer>
+</html>

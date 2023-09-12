@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .cabecalho{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--header-color);
+      border-bottom: 1px solid var(--stroke-color);
+      height: 80px;
+  }
+  .logo{
+      display: inline-block;
+      height: 80px;
+      padding: 15px;
+  }
+  .logo img{
+      height: 100%;
+  }
+  .menu-toggle{
+      float: right;
+      color: aliceblue;
+      background-color: var(--header-color);
+      border: 1px solid var(--stroke-color);
+      border-radius: 5px;
+      height: 40px;
+      padding: 10px 20px;
+      margin: 20px 15px;
+      cursor: pointer;
+  }
+  .navbar{
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 34px;
+  }
+  .nav-menu{
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      list-style: none;
+  }
+  
+  .nav-link{
+      transition: 0.5s;
+  }
+  .cabecalho a{
+      text-decoration: none;
+      color: --text-color;
+      font-size: 1.3em;
+  }
+  .nav-item a{
+      padding: 15px;
+      background: var(--surface-color);
+      border: 1px solid var(--stroke-color);
+      border-radius: 8px;
+      backdrop-filter: blur(4px);
+  }
+  .menu-toggle{
+      display: none;
+      cursor: pointer;
+      position: fixed;
+      right: 0;
+  }
+  
+  .autenticacao{
+      height: 80px;
+      padding: 25px;
+  }
+  .autenticacao a{
+      text-decoration: none;
+      color: var(--text-color);
+      
+  }
+  .nav-item a:hover, .nav-item a:focus, .nav-item a.selected{
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+  }
+  .botao{
+      border-radius: 20px;
+      padding: 10px 25px;
+      margin: 10px;
+  }
+  .destaque{
+      background-color: rgb(201, 31, 31);
+      color: var(--text-color);
+  }
+  @media(max-width:1049px){
+    .menu-toggle{
+      display: block;
+      position: fixed;
+      right: 0;
+    }
+    .nav-menu{
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      border-radius: 0 0 20px 20px;
+      background-color: var(--surface-color);
+      text-align: center;
+      flex-direction: column;
+      width: 100%;
+      transition: 0.3s;
+    }
+    .nav-item{
+      margin: 16px 0;  
+    }
+    .nav-item a{
+      background: none;
+      border: none;
+    }
+    .nav-item a:hover, .nav-item a:focus, .nav-item a.selected {
+      background: none;
+      border: none;
+    }
+    .nav-menu.active{
+      left: 0;
+    }
+    .autenticacao{
+      position: relative;
+      right: 60px;
+    }
+  
+    #container.menu-open{
+      margin-top: 220px;
+    }
+  }
+  .conteudo{
+    display: flex;
+  }
+.carrinho{
+  display: inline-block;
+  margin: 30px 30px
+}
+
+
+  .curso{
+      display: inline-block;
+      vertical-align: top;
+      background-color: var(--highlight-color);
+      box-shadow:2px 3px 10px 0px var(--stroke-color);
+      margin: 5px;
+      padding: 5px;
+      font-family: Arial, Helvetica, sans-serif;
+      height: 300px;
+      width: 250px;
+  }
+  .curso img{
+      box-sizing: content-box;
+      width: 100%;
+      height: 50%;
+  }
+  .curso-info {
+      overflow: hidden;
+      height: 80px;
+      margin: 4px 8px 6px 8px;
+  }
+  
+  .curso-info h4{
+      font-size: 1.4em;
+      font-weight: lighter;
+      margin: 0;
+      margin-bottom: 4px;
+  }
+  .curso-preco{
+      position: relative;
+      text-align: end;
+      bottom: -5px;
+      padding: 10px 6px 4px 4px;
+      
+  }
+  
+  .preco-de{
+      color: var(--dectext-color);
+      text-decoration: line-through;
+      font-weight: bold;
+  }
+  .preco-por{
+      font-size: 1.4em;
+      color: var(--dec-text-color); 
+      font-weight: bold;
+      padding-right: 10px;
+  }
+.curso-preco .btncar{
+    width: 32px;
+    height: 32px;
+    border: 0;
+    background: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgb(209, 72, 72) url(./assets/cart.badge.plus.svg) center no-repeat;  
+    opacity: 100%;
+  }
+  .carrinho_compra{
+    overflow: hidden;
+    width: 300px;
+    line-height: 28px;
+    padding: 10px;
+    margin: 4px 8px 6px 8px;
+  }
+  .btncar:hover{
+    opacity: 95%;
+    outline: 4px solid var(--highlight-color);
+  }
+  .btn-remove{
+    width: 32px;
+    height: 32px;
+    border: 0;
+    background: url(./assets/cart.badge.minus.svg) center no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .btn-remove:hover{
+    outline: 6px solid var(--highlight-color);
+  }
+  .carrinho_total h4{
+    padding-bottom: 10px;
+  }
+
+  .carrinho_total a{
+    display: flex;
+    text-decoration: none;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    background-color:  rgb(209, 72, 72);
+  }
+  .carrinho_total a:hover{
+    outline: 4px solid var(--highlight-color);
+    
+  }
+  :root {
+    --text-color: white;
+    --dectext-color: rgb(209, 72, 72);
+    --dec-text-color: rgb(55, 185, 55);
+    --bg-url: url(./assets/bg-Mobile.png);
+    --header-color: rgba(6, 39, 82, 0.61);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+    --switch-highlight-color: rgba(8, 7, 7, 0.2);
+    --switch-stroke-color: rgba(199, 189, 199, 1);
+    --switch-bg-url: url(./assets/moon-stars.svg);
+  }
+  
+  .light {
+    --text-color: black;
+    --dectext-color: rgb(233, 19, 19);
+    --dec-text-color: rgb(43, 117, 43);
+    --bg-url: url(./assets/bg-Mobile-Light.png);
+    --header-color: rgba(17, 94, 194, 0.61);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-stroke-color: rgba(92, 89, 89, 0.418);
+    --switch-bg-url: url(./assets/sun.svg);
+  }
+  
+  body {
+    background: var(--bg-url) no-repeat top center;
+    height: 100vh;
+  }
+  
+  body * {
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+  }
+  
+  #container {
+    width: 100%;
+    max-width: 588px;
+    margin: 56px auto 0px;
+    padding: 0 24px;
+  }
+  
+  
+  
+  /* switch */
+  #switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+    float: right;
+  }
+  
+  #switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+  
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    cursor: pointer;
+    animation: slide-back 0.2s;
+  }
+  
+  .light #switch button {
+    animation: slide-in 0.2s forwards;
+  }
+  
+  #switch button:hover {
+    /* border: 8px solid var(--switch-highlight-color);
+    box-shadow: 0px 0px 8px 0.81px var(--switch-stroke-color); */
+    outline: 8px solid var(--highlight-color);
+  }
+  
+  #switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+  }
+  
+  /* social links */
+  #social-links {
+    display: flex;
+    justify-content: center;
+  
+    padding: 24px 0;
+  
+    font-size: 24px;
+  }
+  
+  #social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  
+    transition: background 0.2s;
+    border-radius: 50%;
+  }
+  
+  #social-links a:hover {
+    background: var(--highlight-color);
+  }
+  
+  footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  /* media queries */
+  @media (min-width: 700px) {
+    :root {
+      
+      --bg-url: url(./assets/bg-desktop.png);
+    }
+  
+    .light {
+      --bg-url: url(./assets/bg-desktop-light.png);
+    }
+  
+  }
+  @media(height: 1368px){
+    body {
+    background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
+  }
+  }
+  
+  /* animation */
+  @keyframes slide-in {
+    from {
+      left: 0;
+    }
+    to {
+      left: 50%;
+    }
+  }
+  
+  @keyframes slide-back {
+    from {
+      left: 50%;
+    }
+    to {
+      left: 0;
+    }
+  }
